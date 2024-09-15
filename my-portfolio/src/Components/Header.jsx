@@ -49,7 +49,7 @@ const Header = () => {
         <div className='w-full py-4 flex items-center justify-between relative text-primaryColor'>
           <h1 className='text-2xl font-extrabold tracking-widest uppercase'>Tomisin</h1>
 
-          <div className={`flex flex-col gap-5 lg:flex-row lg:gap-8 fixed lg:static top-0 right-0 pt-20 lg:pt-0 px-[1rem] bg-white w-full md:w-[50%] lg:w-auto h-[100vh] lg:h-auto ${showMenu ? '' : 'transform translate-x-full lg:translate-x-0'} duration-500 ease-in-out`}>
+          <div className={`flex flex-col gap-5 lg:flex-row lg:gap-8 fixed z-40 lg:static top-0 right-0 pt-20 lg:pt-0 px-[1rem] bg-white w-full md:w-[50%] lg:w-auto h-[100vh] lg:h-auto ${showMenu ? '' : 'transform translate-x-full lg:translate-x-0'} duration-500 ease-in-out`}>
             {menu.map(menu => (
               <div onClick={()=>handleMenu(menu.name)} key={menu.name} className="flex items-center gap-1 py-[6px]">
                 <p className='lg:hidden'>{menu.icon}</p>
@@ -58,7 +58,7 @@ const Header = () => {
             ))}     
           </div>
 
-          <div onClick={() => setShowMenu(!showMenu)} className='z-30 lg:hidden'>
+          <div onClick={() => setShowMenu(!showMenu)} className='z-50 lg:hidden'>
             {showMenu ? <LiaTimesSolid size={30} /> : <HiOutlineBars3BottomRight size={30} />}
           </div>
         </div>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  body{
+    overflow: hidden;
+  }
   .scrollBar::-webkit-scrollbar{
     width: 5px;
   }
@@ -11,6 +14,12 @@
   }
   .scrollBar::-webkit-scrollbar-thumb {
     background-color: white;
+  }
+  .button-container:hover .button-slide {
+    transform: translateX(0);
+  }
+  .button-container:hover .button {
+    color: #ffffff;
   }
 }
 
