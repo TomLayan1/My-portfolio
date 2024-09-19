@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         primaryColor: '#000000',
+        secondaryColor: '#9e7b2c',
+        hoverBg: '#00000060'
       },
       container: {
         center: true,
@@ -15,6 +17,9 @@ module.exports = {
           md: '2rem',
           sm:'3rem'
         }
+      },
+      boxShadow: {
+        customShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
       }
     },
   },

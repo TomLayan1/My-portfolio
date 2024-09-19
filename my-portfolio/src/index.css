@@ -10,10 +10,10 @@
     width: 5px;
   }
   .scrollBar::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: #ffffff;
   }
   .scrollBar::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: #9e7b2c;
   }
   .button-container:hover .button-slide {
     transform: translateX(0);
@@ -21,8 +21,16 @@
   .button-container:hover .button {
     color: #ffffff;
   }
-}
-
-.test{
-  color: #969696;
+  .main-bx:hover .slide-bx {
+    transform: translateY(0);
+  }
+  .main-bx:hover .image {
+    overflow: hidden;
+    transform: scale(1.3);
+  }
+  .subText {
+    background: -webkit-linear-gradient(180deg, #0000FF, #FF0000 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
