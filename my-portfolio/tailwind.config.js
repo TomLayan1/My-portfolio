@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         primaryColor: '#000000',
         secondaryColor: '#9e7b2c',
-        hoverBg: '#00000060'
+        hoverBg: '#000000ab'
       },
       container: {
         center: true,

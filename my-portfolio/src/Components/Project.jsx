@@ -21,19 +21,22 @@ const Project = () => {
               <div className='main-bx flex items-center relative overflow-hidden w-full cursor-pointer'>
                 <img className='image  duration-700 rounded-tl-xl rounded-tr-xl' src={project.image} alt='demo' />
                 <div className='slide-bx h-full md:px-4 absolute flex items-center bg-hoverBg -translate-x-0 translate-y-full duration-500 rounded-tl-xl rounded-tr-xl'>
-                  <p className='text-[14px] text-center text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl.</p>
+                  <div className='text-white'>
+                    <p className='text-[14px] md:text-base text-center font-bold uppercase tracking-widest mb-2'>{project.name}</p>
+                    <p className='text-[14px] text-center'>{project.description}</p>
+                  </div>
                 </div>
               </div>
               <div className='flex flex-col items-center justify-center py-3 px-2 md:px-4'>
-                <p className='text-[14px] md:text-base tracking-widest mb-2'>{project.name}</p>
+                {/* <p className='text-[14px] md:text-base tracking-widest mb-2'>{project.name}</p> */}
                 <div className='flex justify-between gap-4 mb-2'>
                   {project.stack.map((stack, index) => (
                     <p key={index} className='text-[13px] md:text-base text-center font-bold'>{stack}</p>
                   ))}
                 </div>
                 <div className='flex items-center justify-center gap-3'>
-                  <a href={project.links.github} target='_blank' className='text-lg cursor-pointer'><FaGithub /></a>
-                  <a href={project.links.website} target='_blank' className='text-lg cursor-pointer'><GoLinkExternal /></a>
+                  <a href={project.links.github} target='_blank' className='text-[14px] flex items-center gap-1 cursor-pointer'>Code <FaGithub size={16} /></a>
+                  <a href={project.links.website} target='_blank' className='text-[14px]  flex items-center gap-1 cursor-pointer'>Live Demo <GoLinkExternal size={16} /></a>
                 </div>
               </div>
             </div>

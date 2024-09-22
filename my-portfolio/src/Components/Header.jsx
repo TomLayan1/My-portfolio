@@ -53,7 +53,7 @@ const Header = () => {
     <header id='home' className='bg-white border lg:fixed z-40 top-0 left-0 lg:w-[99.6%]'>
       <div className='container'>
         <div className='w-full py-4 flex items-center justify-between relative text-primaryColor'>
-          <h1 className='text-4xl font-extrabold tracking-widest uppercas'><span className='text-secondaryColor text-4xl'>T</span>ómisìn</h1>
+          <h1 className='text-4xl font-extrabold tracking-widest uppercas'><span className='text-4xl'>T</span>ómisìn</h1>
 
           <div className={`flex flex-col gap-5 lg:flex-row lg:gap-8 fixed z-50 lg:static top-0 right-0 pt-20 lg:pt-0 px-[1rem] bg-white w-full h-[100vh] md:w-[50%] lg:w-auto lg:h-auto ${showMenu ? '' : 'transform translate-x-full lg:translate-x-0'} duration-500 ease-in-out`}>
             {menu.map(menu => (
