@@ -1,19 +1,17 @@
 import React, { useContext } from 'react'
-import ria from '../Assets/ria.png'
+import placeholder from '../Assets/placeholder.png'
 import css from '../Assets/css-3.png'
 import html from '../Assets/html-5.png'
 import js from '../Assets/js.png'
 import reactjs from '../Assets/React.png'
 import tailwind from '../Assets/Tailwind CSS.png'
 import typescript from '../Assets/typescript.png'
-import { PortfolioContext } from '../Context/Context'
+import me from '../Assets/me.jpg'
+import { motion } from 'framer-motion'
 
 
 
 const About = () => {
-
-  // From context
-  // const { about } = useContext(PortfolioContext)
 
   const stack = [html, css, js, reactjs, tailwind, typescript]
 
@@ -24,17 +22,33 @@ const About = () => {
           <h1 className='text-2xl md:text-4xl text-white tracking-widest text-center font-bold mb-2'>About Me</h1>
           <p className='text-center text-white tracking-widest mb-6 lg:mb-14 subText'>Introduction</p>
           <div className='flex items-center justify-between'>
-            <img className='hidden md:block w-[30%] lg:w-[%] rounded-xl' src={ria} />
+            <motion.div
+              initial={{ translateX: -200 }}
+              whileInView={{ translateX: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5}}
+              className='hidden md:block w-[270px] h-[270px] rounded-full overflow-hidden'>
+              <img className='w-' src={me} />
+            </motion.div>
             <div className='md:w-[60%]'>
-              <p className='text-[14px] text-white leading-7 mb-5 tracking-wide'>I am a junior frontend web developer passionate about building clean, responsive, and user-friendly websites. Skilled in HTML, CSS, Tailwind, JavaScript, React, and TypeScript, I love bringing design concepts to life through functional and interactive interfaces. I aim to create digital experiences that are both visually appealing and intuitive. I thrive in collaborative settings, embracing teamwork and open communication to overcome challenges. Always eager to learn and share knowledge, I am dedicated to contributing my expertise to develop impactful products.</p>
-              <div className='flex items-center gap-2'>
+              <motion.p
+                initial={{ translateX: 200 }}
+                whileInView={{ translateX: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }} 
+                className='text-[14px] text-white font-sans leading-7 mb-5 tracking-wide'>I am a frontend web developer passionate about building clean, responsive, and user-friendly websites. Skilled in HTML, CSS, Tailwind, JavaScript, React, and TypeScript, I love bringing design concepts to life through functional and interactive interfaces. I aim to create digital experiences that are both visually appealing and intuitive. I thrive in collaborative settings, embracing teamwork and open communication to overcome challenges. Always eager to learn and share knowledge, I am dedicated to contributing my expertise to develop impactful products.</motion.p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className='flex items-center gap-2'>
                 <h5 className='text-white md:text-xl w-[20%] font-bold subText'>Stack |</h5>
                 <div className='w-[80%] flex items-center justify-between'>
                   {stack.map((stack, index) => (
                     <img className='w-[30px]' key={index} src={stack} alt='stack' />
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

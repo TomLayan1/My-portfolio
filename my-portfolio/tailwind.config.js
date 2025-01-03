@@ -18,6 +18,12 @@ module.exports = {
           sm:'3rem'
         }
       },
+      constainerTwo: {
+        center: true,
+        padding: {
+          DEFAULT: 0
+        }
+      },
       boxShadow: {
         customShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
       }

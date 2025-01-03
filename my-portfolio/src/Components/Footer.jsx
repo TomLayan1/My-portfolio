@@ -2,13 +2,10 @@ import React, { useContext } from 'react'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { PortfolioContext } from '../Context/Context'
 import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
-  // From context
-  // const { footer } = useContext(PortfolioContext)
 
   return (
     <footer id='footer' className='bg-primaryColor text-white w-full py-16 lg:pb-20 lg:pt-32'>

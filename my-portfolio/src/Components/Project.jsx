@@ -6,14 +6,12 @@ import { PortfolioContext } from '../Context/Context'
 
 
 const Project = () => {
-  // From context
-  // const { portfolio } = useContext(PortfolioContext)
 
   return (
     <section id='portfolio' className='py-12 pb-16 md:py-14 md:pb-14 lg:py-24 lg:pb-24'>
       <div className='container'>
         <div className='w-[70%] lg:w-[80%] mx-auto'>
-          <h1 className='text-2xl md:text-4xl text-primaryColor text-center font-bold tracking-widest mb-2'>Portfolio</h1>
+          <h1 className='text-2xl md:text-4xl text-primaryColor text-center font-bold tracking-widest mb-2'>Selected Project</h1>
           <p className='text-center text-primaryColor tracking-widest mb-6 lg:mb-14 subText'>Recent Works</p>
           <div className='grid md:grid-cols-2 gap-5 md:gap-10'>
             {projects.map(project => (

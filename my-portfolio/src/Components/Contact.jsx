@@ -91,7 +91,7 @@ const Contact = () => {
                 type='text'
                 name="user_name"
                 value={contact.user_name}
-                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5'
+                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Name'
                 required />
               <input
@@ -99,14 +99,14 @@ const Contact = () => {
                 type='email'
                 name="user_email"
                 value={contact.user_email}
-                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5'
+                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Email'
                 required />
               <textarea
                 onChange={handleChange}
                 name="message"
                 value={contact.message}
-                className='w-full h-[120px] border border-slate-400 rounded-lg p-1 px-2 mb-5'
+                className='w-full h-[120px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Message'
                 required />
               <div className='w-[170px] lg:w-[220px] h-[40px] flex border-2 border-primaryColor relative overflow-hidden cursor-pointer button-container'>
@@ -115,7 +115,7 @@ const Contact = () => {
                   <input
                     type='submit'
                     value='Send Message'
-                    className='w-full h-full cursor-pointer' />
+                    className='w-full h-full cursor-pointer outline-none' />
                 </div>
               </div>
             </form>
