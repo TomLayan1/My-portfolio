@@ -2,11 +2,11 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from "react-icons/fa";
 import { RiMailSendLine } from "react-icons/ri";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { TiArrowRight } from "react-icons/ti";
-import { PortfolioContext } from '../Context/Context'
 
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
 
   const myContacts = [
     {
@@ -48,7 +48,6 @@ const Contact = () => {
       })
       .then(
       () => {
-        console.log('SUCCESS!');
         setContact({
           user_name: '',
           user_email: '',
@@ -62,28 +61,27 @@ const Contact = () => {
   };
 
 
-
   return (
-    <div id='contact' className='py-12 pb-16 md:py-14 md:pb-14 lg:py-28 lg:pb-28'>
+    <div ref={contactRef} id='contact' className='text-white py-12 pb-16 md:py-14 md:pb-14 lg:py-28 lg:pb-28'>
       <div className='container'>
         <div className='lg:w-[80%] mx-auto flex flex-col gap-10 md:flex-row justify-between'>
           <div>
-            <h3 className='text-2xl text-center font-bold mb-5 subText'>Talk to me</h3>
+            <h3 className='text-2xl text-center text-white font-bold mb-5'>Talk to me</h3>
             <div className='flex flex-col gap-5 md:gap-7'>
               {myContacts.map(contact => (
-                <div key={contact.name} className='border border-slate-400 p-5 w-[80%] md:w-full mx-auto rounded-xl flex flex-col items-center gap-3 shadow-customShadow'>
+                <div key={contact.name} className='bg-[#ffffff16] border border-[#2d3847] p-5 w-[80%] md:w-full mx-auto rounded-xl flex flex-col items-center gap-3 shadow-customShadow'>
                   <div className='flex flex-col items-center'>
                     <p className='text-xl'>{contact.icon}</p>
                     <p className='text-[14px] font-semibold'>{contact.name}</p>
                     <p className=''>{contact.linkText}</p>
                   </div>
-                  <a href={contact.link} target='_blank' className='flex items-center cursor-pointer'>Write me <TiArrowRight size={20} /></a>
+                  <a href={contact.link} target='_blank' rel='noreferrer' className='flex items-center cursor-pointer'>Write me <TiArrowRight size={20} /></a>
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <h3 className='text-2xl text-center font-bold mb-5 subText'>Write to me</h3>
+            <h3 className='text-2xl text-center font-bold mb-5'>Write to me</h3>
 
             <form ref={form} onSubmit={sendEmail} className='w-[80%] mx-auto text-[14px]'>
               <input
@@ -91,7 +89,7 @@ const Contact = () => {
                 type='text'
                 name="user_name"
                 value={contact.user_name}
-                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
+                className='w-full h-[40px] border border-buttonBg bg-secondaryColor text-white rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Name'
                 required />
               <input
@@ -99,23 +97,23 @@ const Contact = () => {
                 type='email'
                 name="user_email"
                 value={contact.user_email}
-                className='w-full h-[40px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
+                className='w-full h-[40px] border border-buttonBg bg-secondaryColor text-white rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Email'
                 required />
               <textarea
                 onChange={handleChange}
                 name="message"
                 value={contact.message}
-                className='w-full h-[120px] border border-slate-400 rounded-lg p-1 px-2 mb-5 outline-none'
+                className='w-full h-[120px] border border-buttonBg bg-secondaryColor text-white rounded-lg p-1 px-2 mb-5 outline-none'
                 placeholder='Message'
                 required />
-              <div className='w-[170px] lg:w-[220px] h-[40px] flex border-2 border-primaryColor relative overflow-hidden cursor-pointer button-container'>
-                <div className='w-full h-full bg-primaryColor absolute transform -translate-x-full duration-300 ease-linear button-slide'></div>
+              <div className='w-[170px] lg:w-[220px] h-[40px] flex border-2 border-buttonBg relative overflow-hidden cursor-pointer button-container'>
+                <div className='w-full h-full bg-buttonBg absolute transform -translate-x-full duration-300 ease-linear button-slide'></div>
                 <div className='w-full h-full transform absolute -translate-x-0 duration-300 ease-linear flex items-center justify-center button'>
                   <input
                     type='submit'
                     value='Send Message'
-                    className='w-full h-full cursor-pointer outline-none' />
+                    className='w-full text-buttonBg hover:text-white h-full cursor-pointer outline-none' />
                 </div>
               </div>
             </form>
