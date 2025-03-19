@@ -1,16 +1,11 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { myServices } from '../Data/data';
 
 
 const Service = ({ serviceRef }) => {
 
-  const services = [
-    {
-      name: 'Frontend Development',
-      description: 'With frontend, I\'m able to combine both my design capabilities with my problem- solving skills, and as I code, I am extensively exercising both simulataneously.I lean more into React frameworks, mainly Next.js, which allows me to increase web performance, optimize images and media much easier, and improve SEO rankings, and TypeScript for catching bugs and discrepanicies early, ensuring that my code is error - free and correct throughout.',
-      stack: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind', 'Framer Motion', 'Git', 'Playwright']
-    }
-  ]
+  const services = myServices
   
   return (
     <div ref={serviceRef} className='py-12 pb-16 md:py-14 md:pb-14 lg:py-28 lg:pb-24'>

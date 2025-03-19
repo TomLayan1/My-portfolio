@@ -36,7 +36,7 @@ export const projects = [
     description: 'Coinwise, a cryptocurrency web app that displays live market prices and historical trends. Using Tailwind CSS for responsive design, Rapid API for real-time data, Moment for precise time formatting, and Chart JS for interactive visualizations.Crypto data is dynamically fetched from Rapid API, ensuring up-to-date and accurate details.',
     links: {
       github: 'https://github.com/TomLayan1/Coinwise/tree/main/coinwise',
-      website: 'coinwiseng.netlify.app'
+      website: 'https://coinwiseng.netlify.app'
     },
     stack: [
       'React', 'Tailwind'
@@ -94,8 +94,15 @@ export const resume = [
       {
         institution: 'ExamCompassNG, Lagos, Nigeria.',
         role: ['Frontend Developer'],
-        year: '2024'
       }
     ]
+  }
+]
+
+export const myServices = [
+  {
+    name: 'Frontend Development',
+    description: 'I create responsive and user-friendly web applications, design visually appealing and accessible interfaces, optimize performance for speed and efficiency, and build reusable, scalable components, while also ensuring smooth functionality through thorough testing and automation.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind', 'Motion', 'Git', 'Playwright']
   }
 ]

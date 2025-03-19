@@ -48,7 +48,7 @@ const About = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     className='text-lg text-justify font-serif text-white'
-                  >Hi, I’m Tomisin Afolayan. I\'m a front-end developer proficient in building high-performance web applications using React.JS with Typescript. My projects have consistently resulted in improved performance and user satisfaction. Eager to contribute to innovative software solutions with a focus on high performance as a dedicated developer.</motion.p>
+                  >Hi, I’m Tomisin Afolayan. I'm a front-end developer proficient in building high-performance web applications using React.JS with Typescript. My projects have consistently resulted in improved performance and user satisfaction. Eager to contribute to innovative software solutions with a focus on high performance as a dedicated developer.</motion.p>
                 </div>
               </div>
             </div>

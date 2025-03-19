@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from "react-icons/fa";
 import { RiMailSendLine } from "react-icons/ri";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { TiArrowRight } from "react-icons/ti";
 
 

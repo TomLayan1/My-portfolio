@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { PiLineVerticalThin } from "react-icons/pi";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 const Hero = ({ homeRef, footerInView }) => {
 
@@ -45,8 +44,8 @@ const Hero = ({ homeRef, footerInView }) => {
         <div className='fixed w-[60px] h-[100vh] top-0 left-0 flex items-center justify-center z-20'>
           <div className={`w-full flex flex-col items-center gap-4 py-3 text-white bg-buttonBg rounded-tr-2xl rounded-br-2xl shadow-customShadow ${footerInView ? 'hidden' : ''} duration-500`}>
             <p className='text-2xl'><PiLineVerticalThin /></p>
-            <a href='https://www.linkedin.com/in/afolayan-oluwatomisin-428a86206/' className='text-2xl cursor-pointer'><FaLinkedin /></a>
-            <a href='https://github.com/TomLayan1' target='_blank' className='text-2xl cursor-pointer'><FaGithub /></a>
+            <a href='https://www.linkedin.com/in/afolayan-oluwatomisin-428a86206/' target='_blank' ref='noreferrer' className='text-2xl cursor-pointer'><FaLinkedin /></a>
+            <a href='https://github.com/TomLayan1' target='_blank' ref='noreferrer' className='text-2xl cursor-pointer'><FaGithub /></a>
             <p className='text-2xl'><PiLineVerticalThin /></p>
           </div>
         </div>

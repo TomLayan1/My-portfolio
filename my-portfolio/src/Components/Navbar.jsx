@@ -55,14 +55,14 @@ const Header = () => {
           </div>
         </div>
 
-        <div className='flex items-center gap-5 z-50'>
-          <div className='w-[140px] lg:w-[220px] h-[40px] flex border-2 border-buttonBg relative overflow-hidden cursor-pointer button-container'>
+        <div className='flex items-center gap-5'>
+          <div className='w-[140px] lg:w-[220px] h-[40px] flex border-2 border-buttonBg relative overflow-hidden cursor-pointer button-container z-30'>
             <div className='w-full h-full bg-buttonBg absolute transform -translate-x-full duration-300 ease-linear button-slide'></div>
             <a href='tomisin.pdf' download='tomisin resume.pdf' className='w-full h-full transform absolute -translate-x-0 duration-300 ease-linear flex items-center justify-center button'>
               <button className='text-buttonBg hover:text-white flex items-center gap-3 py-2 px-5 cursor-pointer'>Get Résumé <BsArrowUpRightCircleFill size={20} /></button>
             </a>
           </div>
-          <div onClick={() => setShowMenu(!showMenu)} className='text-buttonBg cursor-pointer'>
+          <div onClick={() => setShowMenu(!showMenu)} className='text-buttonBg cursor-pointer z-50'>
             {showMenu ? <LiaTimesSolid size={35} /> : <HiOutlineBars3BottomRight size={35} />}
           </div>
         </div>
