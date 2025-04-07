@@ -5,6 +5,8 @@ import Contact from '../Components/Contact'
 import Service from '../Components/Service'
 import Footer from '../Components/Footer'
 import useInView from '../Hooks/UseInview'
+
+
 const Home = () => {
 
   const home = useRef(null)

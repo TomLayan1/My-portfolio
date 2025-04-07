@@ -103,6 +103,6 @@ export const myServices = [
   {
     name: 'Frontend Development',
     description: 'I create responsive and user-friendly web applications, design visually appealing and accessible interfaces, optimize performance for speed and efficiency, and build reusable, scalable components, while also ensuring smooth functionality through thorough testing and automation.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind', 'Motion', 'Git', 'Playwright']
+    stack: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind', 'Motion', 'Git', 'Playwright', 'Redux', 'Playwright', 'GraphQL', 'Framer Motion']
   }
 ]
